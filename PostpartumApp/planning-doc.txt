@@ -6,8 +6,7 @@ Decide on theme and layout of App…
 	- Add JDBC Client.
 	•	Frontend project setup
 	- Initialize React Native app with npx react-native init.
-	- Install navigation, state management (if needed), and HTTP client libraries (Axios, React Query, etc.).
-	•	Folder structure
+	-	Folder structure
 	- Backend(Server)
 	- Frontend(Client)
 
