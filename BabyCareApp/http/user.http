@@ -1,0 +1,37 @@
+@url = http://localhost:8080/user
+
+###
+### Find
+GET {{url}}/1 HTTP/1.1
+Accept: application/json
+
+###
+
+### Create
+POST {url}}/create
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "test@example.com",
+  "password": "abc1234"
+}
+
+###
+
+### Update
+PUT {url}}/edit/1
+Content-Type: application/json
+
+{
+  "firstName": "DayshiaUpdated",
+  "lastName": "Jones",
+  "email": "dayshia+updated@example.com"
+}
+
+###
+
+### Delete by id
+GET {{url}}/delete/1
+Accept: application/json

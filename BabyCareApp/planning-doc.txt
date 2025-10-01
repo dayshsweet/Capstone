@@ -1,0 +1,45 @@
+Decide on theme and layout of App…
+
+1. Set Up Foundation (1.5 hours)
+	•	Backend project setup
+	- Create project.
+	- Add JDBC Client.
+	•	Frontend project setup
+	- Initialize React Native app with npx react-native init.
+	-	Folder structure
+	- Backend(Server)
+	- Frontend(Client)
+
+2. Design Data Layer (DB + JDBC) (3-4 hours)
+	•	DB schema (Users, Babies, BabyCareLogs, Appointments, JournalEntries, Posts, Comments).
+	•	SQL scripts for schema + seed data.
+	•	Implement repositories vertically
+	•	Write unit tests for repositories vertically
+
+3. Domain / Service Layer (Business Logic) (4 hours)
+	•	Create models: User, Baby, BabyCareLog, Appointment, Post, Comment.
+	•	Service classes:
+	- UserService (register, login, update profile).
+	- BabyService (add baby, assign caregivers(users)).
+	- CareLogService (log feedings/diapers/pumping/sleep, retrieve history).
+	- AppointmentService
+	- JournalEntriesService
+	- PostService
+	- CommentService
+	•	Add validation
+
+4. Controllers / API (2 hours)
+	•	REST controllers/endpoints:
+	•	Map JSON requests/responses to domain objects.
+	•	Test endpoints
+
+5. Frontend – API Integration (1 hour)
+	•	Create/implement an api folder
+	•	Set up URL.
+
+6. Frontend – Components (Vertical Slices) (Not sure, need to break this up as it’s the majority of the project) (8 - 12 hours ??
+Do one feature at a time end-to-end creating UI screens as I go.  Will see what needs to be broken up more. Will come back and break this up once I get 1-5 solid. JOURNAL SHOULD HAVE SOME FORM OF SECURITY, maybe password entry.
+
+Again, decide on UI theme and layout. App should have login, might do first just so it’s there and edit it if needed.
+
+7. Once 1-6 is complete and solid, consider security, or sockets as stretch goals.

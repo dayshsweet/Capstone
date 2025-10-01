@@ -1,0 +1,36 @@
+@url = http://localhost:8080/calendar
+
+###
+### Find
+GET {{url}}/1 HTTP/1.1
+Accept: application/json
+
+###
+
+### Create
+POST {url}}/create
+Content-Type: application/json
+
+{
+  "user_id" : 1,
+  "baby_id" : 1,
+  "event_type" : "Doctor Appointment",
+  "description" : "baby getting immunizations",
+  "time" : "123456"
+}
+
+###
+
+### Update
+PUT {url}}/edit/1
+Content-Type: application/json
+
+{
+  "details" : "baby getting height measured"
+}
+
+###
+
+### Delete by id
+GET {{url}}/delete/1
+Accept: application/json
