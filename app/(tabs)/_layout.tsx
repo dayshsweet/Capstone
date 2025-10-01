@@ -1,35 +1,53 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import { StyleSheet } from 'react-native';
+import {Tabs} from 'expo-router';
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+const _layout = () => {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
-      <Tabs.Screen
-        name="index"
+   <Tabs>
+
+    <Tabs.Screen 
+        name="index" 
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+            headerShown: false, 
+            title: 'Home'
         }}
-      />
-      <Tabs.Screen
-        name="explore"
+     />
+
+    <Tabs.Screen 
+        name="journal" 
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+            headerShown: false, 
+            title: 'Journal'
         }}
-      />
-    </Tabs>
-  );
+     />
+
+    <Tabs.Screen 
+        name="carelog" 
+        options={{
+            headerShown: false, 
+            title: 'Care Log'
+        }}
+     />
+
+    <Tabs.Screen 
+        name="profile" 
+        options={{
+            headerShown: false, 
+            title: 'Profile'
+        }}
+     /> 
+    
+    <Tabs.Screen
+        name="calendar_event"
+        options={{
+            headerShown: false,
+            title: 'Calendar'
+        }}
+    />
+   </Tabs>
+  )
 }
+
+export default _layout
+
+const styles = StyleSheet.create({})
