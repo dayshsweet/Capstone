@@ -1,4 +1,4 @@
-@url = http://localhost:8080/baby
+@url = http://localhost:8080/journal
 
 ###
 ### Find
@@ -12,10 +12,9 @@ POST {url}}/create
 Content-Type: application/json
 
 {
-  "name" : "Baby",
-  "gender" : "girl",
-  "birth_date" : "20250619",
-  "user_id" : 1
+  "user_id" : 1,
+  "text" : "took first steps. today was rough",
+  "timestamp" : "20250619"
 }
 
 ###
@@ -25,7 +24,7 @@ PUT {url}}/edit/1
 Content-Type: application/json
 
 {
-  "name" : "Updated Baby"
+  "text" : "Updated Journal"
 }
 
 ###

@@ -1,4 +1,4 @@
-@url = http://localhost:8080/baby
+@url = http://localhost:8080/calendar
 
 ###
 ### Find
@@ -12,10 +12,11 @@ POST {url}}/create
 Content-Type: application/json
 
 {
-  "name" : "Baby",
-  "gender" : "girl",
-  "birth_date" : "20250619",
-  "user_id" : 1
+  "user_id" : 1,
+  "baby_id" : 1,
+  "event_type" : "Doctor Appointment",
+  "description" : "baby getting immunizations",
+  "time" : "123456"
 }
 
 ###
@@ -25,7 +26,7 @@ PUT {url}}/edit/1
 Content-Type: application/json
 
 {
-  "name" : "Updated Baby"
+  "details" : "baby getting height measured"
 }
 
 ###

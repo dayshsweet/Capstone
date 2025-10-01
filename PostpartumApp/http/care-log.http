@@ -1,0 +1,36 @@
+@url = http://localhost:8080/log
+
+###
+### Find
+GET {{url}}/1 HTTP/1.1
+Accept: application/json
+
+###
+
+### Create
+POST {url}}/create
+Content-Type: application/json
+
+{
+  "baby_id" : 1,
+  "user_id" : "1",
+  "type" : "feeding",
+  "details" : "baby ate 2oz",
+  "timestamp" : "123456"
+}
+
+###
+
+### Update
+PUT {url}}/edit/1
+Content-Type: application/json
+
+{
+  "details" : "baby ate 10oz"
+}
+
+###
+
+### Delete by id
+GET {{url}}/delete/1
+Accept: application/json
